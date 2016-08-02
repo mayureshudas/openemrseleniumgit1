@@ -197,7 +197,7 @@ public class Test1 {
 		}
 		driver.switchTo().window(mainWindow);
 	}
-	@Test(dependsOnMethods={"addPatient","addInfo","searchPatient"}, groups={"negative"})
+	/*@Test(dependsOnMethods={"addPatient","addInfo","searchPatient"}, groups={"negative"})
 	public void negativeTest(){
 		driver.switchTo().frame(driver.findElement(By.xpath("//frameset/frameset[2]/frame[@name='RTop']")));
 		driver.findElement(By.xpath("//form/table//input[@name='form_cb_ins']")).click();
@@ -211,7 +211,7 @@ public class Test1 {
 		//SoftAssert asert=new SoftAssert();
 		//asert.fail("Test case is failed because it is trying to add Insurer XYZ which is not present");
 		Assert.fail("Test case is failed because it is trying to add Insurer XYZ which is not present");
-	}
+	}*/
 	public boolean alerPresent(){
 		try{
 			driver.switchTo().alert();
