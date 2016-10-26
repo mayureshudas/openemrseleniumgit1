@@ -15,7 +15,7 @@ public class TestsLauncher {
 		// TODO Auto-generated method stub
 
 		
-		String url="http://firsttest.hrgmj34rtq.us-west-2.elasticbeanstalk.com/interface/login/login_frame.php?site=default";
+		String url="http://52.66.9.129";
 		TestListenerAdapter tla = new TestListenerAdapter();
 		TestNG testng = new TestNG();
 		testng.setTestClasses(new Class[] { Test1.class });
