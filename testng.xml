@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
 <suite name="OpenEMR">
-<parameter name="url" value="http://35.154.38.172"></parameter>
+<parameter name="url" value="http://35.154.32.59"></parameter>
 
   <test name="DemoTests">
   
