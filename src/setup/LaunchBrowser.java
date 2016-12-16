@@ -4,7 +4,7 @@ import java.io.File;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.*;
 import org.openqa.selenium.firefox.FirefoxBinary;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
@@ -30,7 +30,13 @@ public class LaunchBrowser {
 
         // Start Firefox driver
        driver = new FirefoxDriver(firefoxBinary, null);*/
-		driver=new FirefoxDriver();
+		//driver=new FirefoxDriver();
+		System.setProperty("webdriver.chrome.bin","/opt/google/chrome/google-chrome");
+		ChromeDriverService service = new ChromeDriverService.Builder()
+    .usingDriverExecutable(new File("/user/chromedriver")) 
+    .usingAnyFreePort()
+    .build();
+		driver=new ChromeDriver();
 
 		
 //driver=new PhantomJSDriver();
