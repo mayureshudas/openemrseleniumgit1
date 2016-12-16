@@ -31,6 +31,7 @@ public class LaunchBrowser {
         // Start Firefox driver
        driver = new FirefoxDriver(firefoxBinary, null);*/
 		//driver=new FirefoxDriver();
+		 System.setProperty("webdriver.chrome.driver", "/usr/chromedriver");
 		System.setProperty("webdriver.chrome.bin","/opt/google/chrome/google-chrome");
 		ChromeDriverService service = new ChromeDriverService.Builder()
     .usingDriverExecutable(new File("/user/chromedriver")) 
