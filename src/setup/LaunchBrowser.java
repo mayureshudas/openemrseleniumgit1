@@ -34,7 +34,7 @@ public class LaunchBrowser {
 		 System.setProperty("webdriver.chrome.driver", "/usr/chromedriver");
 		System.setProperty("webdriver.chrome.bin","/opt/google/chrome/google-chrome");
 		ChromeDriverService service = new ChromeDriverService.Builder()
-    .usingDriverExecutable(new File("/user/chromedriver")) 
+    .usingDriverExecutable(new File("/opt/google/chrome/google-chrome")) 
     .usingAnyFreePort()
     .build();
 		driver=new ChromeDriver();
