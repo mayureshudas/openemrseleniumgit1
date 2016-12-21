@@ -32,9 +32,10 @@ public class LaunchBrowser {
        driver = new FirefoxDriver(firefoxBinary, null);*/
 		//driver=new FirefoxDriver();
 		 System.setProperty("webdriver.chrome.driver", "/usr/chromedriver");
-		ChromeOptions options = new ChromeOptions();
-		options.addArguments(new String[] { "chrome.switches", "--disable-extensions" });
-                driver = new ChromeDriver(options);
+		System.setProperty("webdriver.chrome.bin","/usr/bin/google-chrome");
+		/*ChromeOptions options = new ChromeOptions();
+		options.addArguments(new String[] { "chrome.switches", "--disable-extensions" });*/
+                driver = new ChromeDriver();
 		/*System.setProperty("webdriver.chrome.bin","/opt/google/chrome/google-chrome");
 		ChromeDriverService service = new ChromeDriverService.Builder()
     .usingDriverExecutable(new File("/opt/google/chrome/google-chrome")) 
