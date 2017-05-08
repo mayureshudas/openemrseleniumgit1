@@ -33,7 +33,7 @@ public class LaunchBrowser {
         // Start Firefox driver
        driver = new FirefoxDriver(firefoxBinary, null);*/
 		//driver=new FirefoxDriver();
-		 System.setProperty("webdriver.chrome.driver","/opt/google/chrome/chromedriver");
+		 System.setProperty("webdriver.chrome.driver","/chrome/chromedriver.exe
 		 //System.setProperty("webdriver.chrome.driver","/chrome/chromedriver.exe");
 		//System.setProperty("webdriver.chrome.bin","/usr/bin/google-chrome-stable");
 		/*ChromeOptions options = new ChromeOptions();
