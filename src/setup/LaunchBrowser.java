@@ -39,7 +39,7 @@ public class LaunchBrowser {
 		/*ChromeOptions options = new ChromeOptions();
 		options.addArguments(new String[] { "chrome.switches", "--disable-extensions" });*/
                ChromeOptions options = new ChromeOptions();
-            //options.setBinary("/usr/bin/google-chrome-stable");
+            options.setBinary("/usr/bin/google-chrome-stable");
 			//ChromeOptions options = new ChromeOptions();
 			//options.setExperimentalOption("prefs", chromePrefs);
 			DesiredCapabilities cap = DesiredCapabilities.chrome();
