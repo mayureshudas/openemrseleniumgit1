@@ -31,11 +31,21 @@ public class LaunchBrowser {
         // Start Firefox driver
        driver = new FirefoxDriver(firefoxBinary, null);*/
 		//driver=new FirefoxDriver();
+		 System.setProperty("webdriver.chrome.driver","/opt/google/chrome/chromedriver");
 		 //System.setProperty("webdriver.chrome.driver","/chrome/chromedriver.exe");
 		//System.setProperty("webdriver.chrome.bin","/usr/bin/google-chrome-stable");
 		/*ChromeOptions options = new ChromeOptions();
 		options.addArguments(new String[] { "chrome.switches", "--disable-extensions" });*/
-                driver = new ChromeDriver();
+               ChromeOptions options = new ChromeOptions();
+            options.setBinary("/usr/bin/google-chrome");
+			//ChromeOptions options = new ChromeOptions();
+			options.setExperimentalOption("prefs", chromePrefs);
+			DesiredCapabilities cap = DesiredCapabilities.chrome();
+			cap.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
+			cap.setCapability(ChromeOptions.CAPABILITY, options);
+			
+				
+			 driver = new ChromeDriver(cap);
 		/*System.setProperty("webdriver.chrome.bin","/opt/google/chrome/google-chrome");
 		ChromeDriverService service = new ChromeDriverService.Builder()
     .usingDriverExecutable(new File("/opt/google/chrome/google-chrome")) 
