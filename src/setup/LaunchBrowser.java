@@ -31,8 +31,8 @@ public class LaunchBrowser {
         // Start Firefox driver
        driver = new FirefoxDriver(firefoxBinary, null);*/
 		//driver=new FirefoxDriver();
-		 System.setProperty("webdriver.chrome.driver","/chrome/chromedriver.exe");
-		System.setProperty("webdriver.chrome.bin","/usr/bin/google-chrome-stable");
+		 //System.setProperty("webdriver.chrome.driver","/chrome/chromedriver.exe");
+		//System.setProperty("webdriver.chrome.bin","/usr/bin/google-chrome-stable");
 		/*ChromeOptions options = new ChromeOptions();
 		options.addArguments(new String[] { "chrome.switches", "--disable-extensions" });*/
                 driver = new ChromeDriver();
