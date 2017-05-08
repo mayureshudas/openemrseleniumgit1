@@ -2,7 +2,9 @@ package setup;
 
 import java.io.File;
 import java.util.concurrent.TimeUnit;
-
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.remote.CapabilityType;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.*;
 import org.openqa.selenium.firefox.FirefoxBinary;
@@ -37,9 +39,9 @@ public class LaunchBrowser {
 		/*ChromeOptions options = new ChromeOptions();
 		options.addArguments(new String[] { "chrome.switches", "--disable-extensions" });*/
                ChromeOptions options = new ChromeOptions();
-            options.setBinary("/usr/bin/google-chrome");
+            options.setBinary("/usr/bin/google-chrome-stable");
 			//ChromeOptions options = new ChromeOptions();
-			options.setExperimentalOption("prefs", chromePrefs);
+			//options.setExperimentalOption("prefs", chromePrefs);
 			DesiredCapabilities cap = DesiredCapabilities.chrome();
 			cap.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
 			cap.setCapability(ChromeOptions.CAPABILITY, options);
